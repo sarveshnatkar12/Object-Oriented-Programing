@@ -39,14 +39,16 @@ This makes Python a fully object-oriented language.
 
 - - **Encapsulation**
   - Making attributes private using double underscores:
+  ```python
   - self.__name
 
 - - **Getter & Setter Methods**
   - Used to access and modify hidden attributes:
+  ```python
   def set_name(self, val):
     self.__name = val
 
-def get_name(self):
+  def get_name(self):
     return self.__name
 
 
@@ -54,6 +56,7 @@ def get_name(self):
 - - **Static Methods**
   - Methods that do not require access to instance (self) or class variables.
     Defined using @staticmethod.
+
 
 
 
