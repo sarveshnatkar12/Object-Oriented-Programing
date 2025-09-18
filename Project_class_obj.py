@@ -1,5 +1,10 @@
 class Chatbook:
+
+    __user_id = 1 #Static Variable
+
     def __init__(self):
+        self.id = Chatbook.__user_id   #only class can acess static variable ie no self.__user_id
+        Chatbook.__user_id += 1  #o/p --> 1,2,3  before static variable 1,1,1
         self.__name = 'Default'
         self.username =''
         self.password =''
@@ -27,6 +32,14 @@ class Chatbook:
         else:
             exit()
 
+    @staticmethod     #as discussed earlier self cant access the ststaic variable
+    def set_id(val):  #hence no self is passed i.e def set_id(self,val):  
+        Chatbook.__user_id = val
+
+    @staticmethod     #same rule used for setter
+    def get_id():
+        return Chatbook.__user_id
+    
     #setter
     def set_object(self , val):
         self.__name = val
