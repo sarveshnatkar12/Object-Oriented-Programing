@@ -56,6 +56,22 @@ This makes Python a fully object-oriented language.
 - - **Static Methods**
   - Methods that do not require access to instance (self) or class variables.
     Defined using @staticmethod.
+```python
+__user_id = 1 #Static Variable (Before constructor)
+def __init__(self):
+        self.id = Chatbook.__user_id   #only class can acess static variable ie no self.__user_id
+        Chatbook.__user_id += 1  #o/p --> 1,2,3  before static variable 1,1,1
+
+@staticmethod     #as discussed earlier self cant access the ststaic variable
+    def set_id(val):  #hence no self is passed i.e def set_id(self,val):  
+        Chatbook.__user_id = val
+
+    @staticmethod     #same rule used for setter
+    def get_id():
+        return Chatbook.__user_id
+
+    
+
 
 
 
