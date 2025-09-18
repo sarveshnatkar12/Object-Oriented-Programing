@@ -43,15 +43,18 @@ This makes Python a fully object-oriented language.
 
 - - **Getter & Setter Methods**
   - Used to access and modify hidden attributes:
-  - def set_name(self, val):
-  -   self.__name = val
-  - def get_name(self):
-  -   return self.__name
+  def set_name(self, val):
+    self.__name = val
+
+def get_name(self):
+    return self.__name
+
 
 
 - - **Static Methods**
   - Methods that do not require access to instance (self) or class variables.
     Defined using @staticmethod.
+
 
 
 
