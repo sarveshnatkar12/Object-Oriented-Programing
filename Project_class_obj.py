@@ -1,9 +1,10 @@
 class Chatbook:
     def __init__(self):
+        self.__name = 'Default'
         self.username =''
         self.password =''
         self.loggedin = False
-        self.menu()
+        #self.menu()
 
     def menu(self):
         user_input = input(""""Welcome to Chatbook !! How would you like to proceed?
@@ -25,6 +26,16 @@ class Chatbook:
             self.sendmsg()
         else:
             exit()
+
+    #setter
+    def set_object(self , val):
+        self.__name = val
+        
+    
+    #getter
+    def get_object(self):
+        return self.__name
+
 
     def signup(self):
         email = input('enter your emailID-->')
